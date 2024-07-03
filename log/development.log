@@ -3458,6 +3458,7 @@ Processing by ActiveStorage::DiskController#show as MP4
 Completed 206 Partial Content in 2ms (ActiveRecord: 0.0ms | Allocations: 324)
 
 
+<<<<<<< Updated upstream
 Started GET "/courses/1" for 127.0.0.1 at 2024-07-01 17:45:24 -0400
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CoursesController#show as HTML
@@ -5495,10 +5496,14 @@ Completed 200 OK in 116ms (Views: 100.7ms | ActiveRecord: 8.2ms | Allocations: 3
 
 
 Started GET "/" for 127.0.0.1 at 2024-07-02 07:41:28 -0400
+=======
+Started GET "/" for 127.0.0.1 at 2024-07-03 18:46:27 -0400
+>>>>>>> Stashed changes
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CoursesController#index as HTML
   Rendering layout layouts/application.html.erb
   Rendering courses/index.html.erb within layouts/application
+<<<<<<< Updated upstream
   [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
   ↳ app/views/courses/index.html.erb:7
   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
@@ -6120,11 +6125,17 @@ Started GET "/courses/1" for 127.0.0.1 at 2024-07-02 07:51:03 -0400
 Processing by CoursesController#index as TURBO_STREAM
   Rendering layout layouts/application.html.erb
   Rendering courses/index.html.erb within layouts/application
+=======
+>>>>>>> Stashed changes
   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
   ↳ app/views/courses/index.html.erb:7
   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
   ↳ app/views/courses/_course.html.erb:4
+<<<<<<< Updated upstream
   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+=======
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+>>>>>>> Stashed changes
   ↳ app/views/courses/_course.html.erb:5
   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
   ↳ app/views/courses/_course.html.erb:4
@@ -6132,7 +6143,11 @@ Processing by CoursesController#index as TURBO_STREAM
   ↳ app/views/courses/_course.html.erb:4
   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
   ↳ app/views/courses/_course.html.erb:4
+<<<<<<< Updated upstream
   [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
+=======
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
+>>>>>>> Stashed changes
   ↳ app/views/courses/_course.html.erb:4
   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
   ↳ app/views/courses/_course.html.erb:4
@@ -6142,6 +6157,7 @@ Processing by CoursesController#index as TURBO_STREAM
   ↳ app/views/courses/_course.html.erb:4
   [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Course"], ["name", "image"], ["LIMIT", 1]]
   ↳ app/views/courses/_course.html.erb:4
+<<<<<<< Updated upstream
   Rendered collection of courses/_course.html.erb [9 times] (Duration: 31.2ms | Allocations: 7672)
   Rendered courses/index.html.erb within layouts/application (Duration: 33.4ms | Allocations: 8326)
 Processing by CoursesController#show as HTML
@@ -6189,5 +6205,26 @@ Processing by Devise::SessionsController#new as HTML
   Rendered shared/_navbar.html.erb (Duration: 2.6ms | Allocations: 913)
   Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 10440)
 Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 11013)
+=======
+  Rendered collection of courses/_course.html.erb [9 times] (Duration: 127.8ms | Allocations: 31916)
+  Rendered courses/index.html.erb within layouts/application (Duration: 147.6ms | Allocations: 41870)
+  Rendered layout layouts/application.html.erb (Duration: 529.9ms | Allocations: 133840)
+Completed 200 OK in 595ms (Views: 530.4ms | ActiveRecord: 7.2ms | Allocations: 143173)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--a0ea8b3e06a95381d9b24200b66cab3a8af1926c/rails-ecpmm.png" for 127.0.0.1 at 2024-07-03 18:46:28 -0400
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--a0ea8b3e06a95381d9b24200b66cab3a8af1926c", "filename"=>"rails-ecpmm"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (3.5ms) [0m[34mGenerated URL for file at key: c0ublzpdcct7kx5kyadyq87f8vhf (http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJjMHVibHpwZGNjdDdreDVreWFkeXE4N2Y4dmhmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicmFpbHMtZWNwbW0ucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcncmFpbHMtZWNwbW0ucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDctMDNUMjI6NTE6MjguMTcwWiIsInB1ciI6ImJsb2Jfa2V5In19--b3bde5d098a434e18ec74492758682fc701aeda8/rails-ecpmm.png)[0m
+Redirected to http://127.0.0.1:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJjMHVibHpwZGNjdDdreDVreWFkeXE4N2Y4dmhmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicmFpbHMtZWNwbW0ucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcncmFpbHMtZWNwbW0ucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDctMDNUMjI6NTE6MjguMTcwWiIsInB1ciI6ImJsb2Jfa2V5In19--b3bde5d098a434e18ec74492758682fc701aeda8/rails-ecpmm.png
+Completed 302 Found in 26ms (ActiveRecord: 0.1ms | Allocations: 4463)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsiZGF0YSI6eyJrZXkiOiJjMHVibHpwZGNjdDdreDVreWFkeXE4N2Y4dmhmIiwiZGlzcG9zaXRpb24iOiJpbmxpbmU7IGZpbGVuYW1lPVwicmFpbHMtZWNwbW0ucG5nXCI7IGZpbGVuYW1lKj1VVEYtOCcncmFpbHMtZWNwbW0ucG5nIiwiY29udGVudF90eXBlIjoiaW1hZ2UvanBlZyIsInNlcnZpY2VfbmFtZSI6ImxvY2FsIn0sImV4cCI6IjIwMjQtMDctMDNUMjI6NTE6MjguMTcwWiIsInB1ciI6ImJsb2Jfa2V5In19--b3bde5d098a434e18ec74492758682fc701aeda8/rails-ecpmm.png" for 127.0.0.1 at 2024-07-03 18:46:28 -0400
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"rails-ecpmm"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 277)
+>>>>>>> Stashed changes
 
 
