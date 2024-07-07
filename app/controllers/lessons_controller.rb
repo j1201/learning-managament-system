@@ -1,5 +1,6 @@
 class LessonsController < ApplicationController
-  before_action :set_lesson, only: %i[ show edit update destroy ]
+  before_action :set_lesson, only: %i[ show update ]
+  before_action :set_course
 
   # GET /lessons or /lessons.json
   def index
@@ -8,7 +9,8 @@ class LessonsController < ApplicationController
 
   # GET /lessons/1 or /lessons/1.json
   def show
-     @course = @lesson.course
+    @completed_lessons = current_user.lesson_users.where(completed:true).pluck(:lesson_id)
+    @course = @lesson.course
   end
 
   # GET /lessons/new
@@ -37,16 +39,35 @@ class LessonsController < ApplicationController
 
   # PATCH/PUT /lessons/1 or /lessons/1.json
   def update
-    respond_to do |format|
-      if @lesson.update(lesson_params)
-        format.html { redirect_to lesson_url(@lesson), notice: "Lesson was successfully updated." }
-        format.json { render :show, status: :ok, location: @lesson }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @lesson.errors, status: :unprocessable_entity }
-      end
+    @lesson_user = LessonUser.find_or_create_by(user: current_user, lesson: @lesson)
+    @lesson_user.update!(completed: true)
+    next_lesson = @course.lessons.where("position > ?", @lesson.position).order(:position).first
+    if next_lesson
+      redirect_to course_lesson_path(@course, next_lesson)
+    else
+      redirect_to course_path(@course), notice: "You've completed the course"
     end
   end
+
+  private
+    def set_course
+      @course = Course.find(params[:course_id])
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_lesson
+      @lesson = Lesson.find(params[:id])
+    end
+
+    def check_paid
+      if @lesson.paid && !current_user.course_users.where(course_id: params[:course_id]).exists?
+        if @lesson.previous_lesson
+          redirect_to course_lesson_path(@course, @lesson.previous_lesson), notice: "You must purchase the full course to access the next lesson"
+        else
+          redirect_to course_path(@course), notice: "You must purchase the full course to access the next lesson"
+        end
+      end
+end
 
   # DELETE /lessons/1 or /lessons/1.json
   def destroy
